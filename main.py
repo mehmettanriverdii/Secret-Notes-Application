@@ -33,6 +33,7 @@ def write_file_decode():
         if(entry_enter_key.get().strip() == "deneme"):
             decrypted = Encryption.decode(text_enter_secret.get("1.0", END).strip())
             text_enter_secret.delete("1.0", END)
+            entry_enter_key.delete("0", END)
             text_enter_secret.insert(1.0, decrypted)
         else:
             messagebox.showwarning("Error", "Şifre hatalı.")
